@@ -58,7 +58,6 @@ int main(){
     printf("client port: %d\n", htons(clientAddr.sin_port));
     //开始读取客户端数据...
     while(1){
-      printf("line 61\n");
       dataSize = recv(clientSocket, buffer, 1024, 0);
       if(dataSize < 0){
         perror("server recv error");
